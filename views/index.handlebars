@@ -1,17 +1,15 @@
 
 <h1>{{title}}</h1>
-<hr>
 {{#each burger}}
   	<h1>Name: {{burger_name}}</h1>
-	<h2>Eaten?: {{eaten}}</h2>
 {{/each}}
 
 <h2>Add a Burger!</h2>
 
 <form class="create-form" action="/" method="POST">
   <div>
-    <label for="burger-name">Author:</label>
-    <input type="text" id="auth" name="burger-name">
+    <label for="burger-name">Burger:</label>
+    <input type="text" id="burger" name="newBurger">
   </div>
-  <button type="submit">Add Burger!</button>
+  <button id ='submit' type="submit">Add Burger!</button>
 </form>

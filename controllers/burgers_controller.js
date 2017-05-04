@@ -1,9 +1,18 @@
-const express = require('express')
-const app = express();
-const burger = require('./models/burger');
+const { Burger } = require('../models/burger');
 
+exports.getHome = (req, res) => {
+    Burger.selectAllNotDevoured((data) => {
+    	console.log(data);
+        const hbsObject = {
+            burger: data
+        }
+        res.render('index', hbsObject);
+    });
+};
 
-// Create the router for the app, and export the router at the end of your file.
-// app.get('/', function (req, res) {
-//   res.send('hello world')
-// })
+exports.postHome = (req, res) => {
+    const newBurger = req.body.newBurger;
+    Burger.insertBurger(newBurger);
+    console.log(newBurger); 
+    res.redirect('/'); 
+};
