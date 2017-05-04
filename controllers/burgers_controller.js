@@ -13,6 +13,5 @@ exports.getHome = (req, res) => {
 exports.postHome = (req, res) => {
     const newBurger = req.body.newBurger;
     Burger.insertBurger(newBurger);
-    console.log(newBurger); 
     res.redirect('/'); 
 };

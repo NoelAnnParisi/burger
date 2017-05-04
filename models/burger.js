@@ -28,5 +28,4 @@ const Burger = {
     }
 };
 
-
 module.exports = { Burger: Burger };
