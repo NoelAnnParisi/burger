@@ -1,5 +1,5 @@
 const mysql = require('mysql');
-const connection;
+var connection;
 
 connection = mysql.createConnection(process.env.JAWSDB_URL); 
 connection.connect(function(err) {
