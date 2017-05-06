@@ -9,7 +9,7 @@
 </div>
 
 <div class="flex justify-around">
-	<div class='flex-row'>
+	<div class='flex-row flex-wrap'>
 		<h2 class='self-center green avenir'>Burgers up for grabs!</h2>
 		{{#each burger}}
 			{{#unless this.eaten}}
@@ -20,7 +20,7 @@
 		  	{{/unless}}
 		{{/each}}
 	</div>
-	<div class='flex-row'>
+	<div class='flex-row flex-wrap'>
 		<h2 class='avenir self-center red'>Burger's that have been eaten!</h2>
 		{{#each burger}}
 			{{#if this.eaten}}
