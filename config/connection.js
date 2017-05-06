@@ -23,7 +23,7 @@ connection.connect(function(err) {
     return;
   }
   console.log("connected as id " + connection.threadId);
-  connection.create();
+  // connection.create();
 });
 // const connection = mysql.createConnection({
 //     host: "localhost",
