@@ -27,6 +27,7 @@
   },
   "devDependencies": {
     "nodemon": "^1.11.0",
-    "tachyons": "^4.7.0"
+    "tachyons": "^4.7.0",
+    "tachyons-flexbox": "^2.0.5"
   }
 }

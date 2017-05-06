@@ -12,8 +12,9 @@ app.use(body.urlencoded({ extended: false }));
 app.engine("handlebars", exphbs({ defaultLayout: "main" }));
 app.set("view engine", "handlebars");
 app.use(express.static(__dirname + "/views"));
-
 app.use(burgerRouter);
-
+app.use((req,res,next)=> {
+	res.status(404).render('404');
+});
 app.listen(port);
 
