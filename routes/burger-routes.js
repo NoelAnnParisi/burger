@@ -3,6 +3,7 @@ const router = require('express').Router(),
 
 router
 	.get('/', burgerController.getHome)
-	.post('/', burgerController.postHome);
+	.post('/addBurger', burgerController.postHome)
+	.post('/', burgerController.deleteBurger);
 
 module.exports = router;

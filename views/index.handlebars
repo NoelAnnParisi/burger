@@ -1,15 +1,33 @@
 
 <h1>{{title}}</h1>
+<h1 class='dark-blue'>Burgers up for grabs!</h1>
 {{#each burger}}
+	{{#unless this.eaten}}
 	<ul>
-  		<li>{{id}}: {{burger_name}}</li>
-  		<button>Eat Me!</button>
+  		<form method="POST" action="/">
+            <input input type="hidden" type="text" name="updateThis" value={{this.id}}><br>
+            <button type="submit" class="btn btn-default">EAT {{this.burger_name}} burger!</button>
+         </form>
   	</ul>
+  	{{/unless}}
 {{/each}}
+<h1>Burger's that have been eaten!</h1>
+
+{{#each burger}}
+	{{#if this.eaten}}
+	<ul>
+  		<form>
+            <input input type="hidden" type="text" name="burger_id" value={{this.id}}><br>
+            <button type="submit" class="btn btn-default">{{this.burger_name}} burger has been eaten!</button>
+         </form>
+  	</ul>
+  	{{/if}}
+{{/each}}
+
 
 <h2>Add a Burger!</h2>
 
-<form class="create-form" action="/" method="POST">
+<form class="create-form" action="/addBurger" method="POST">
   <div>
     <label for="burger-name">Burger:</label>
     <input type="text" id="burger" name="newBurger">

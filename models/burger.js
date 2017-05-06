@@ -5,7 +5,6 @@ const { orm } = require('../config/orm');
 const Burger = {
     selectAllDevoured: callback => {
         orm.selectAllDevoured(res => {
-            console.log("orm data:", result);
             callback(res);
         })
     },
@@ -23,7 +22,7 @@ const Burger = {
     //Update a particular burger such that it is devoured
     updateBurger: burger => {
         orm.updateOne(burger, data => {
-            console.log("YOUR BURGER WAS UPDATED");
+            console.log('This is your data from burger.js', data);
         });
     }
 };

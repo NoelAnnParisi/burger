@@ -12,6 +12,20 @@ exports.getHome = (req, res) => {
 
 exports.postHome = (req, res) => {
     const newBurger = req.body.newBurger;
+    console.log("this is your new Burger:", newBurger);
     Burger.insertBurger(newBurger);
     res.redirect('/'); 
 };
+
+
+exports.deleteBurger = (req, res) => {
+    const updateThis = req.body.updateThis;
+    console.log('this is the updateThis variable:', updateThis);
+    Burger.updateBurger(updateThis);
+    res.redirect('/');
+};
+
+// module.exports = {
+//     getHome,
+//     postHome
+// }

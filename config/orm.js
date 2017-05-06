@@ -23,7 +23,7 @@ const moment = require('moment'),
             });
         },
         updateOne: burger => {
-            const queryString = `UPDATE burgers SET eaten=true WHERE burger_name=${connection.escape(burger)}`;
+            const queryString = `UPDATE burgers SET eaten=true WHERE id=${connection.escape(burger)}`;
             connection.query(queryString, (err, result) => {
                 console.log('update one function', result);
             });
