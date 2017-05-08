@@ -1,21 +1,6 @@
-<<<<<<< HEAD
 const mysql = require('mysql'); 
 var connection;
-// if (process.env.JAWSDB_URL) {
-//   connection = mysql.createConnection(process.env.JAWSDB_URL);
-// } else {
-//   connection = mysql.createConnection({
-//     host: 'localhost',
-//     user: 'root',
-//     password: '',
-//     database: "burgers_db"
-//   });
-// }
-=======
-const mysql = require('mysql');
-const connection;
 
->>>>>>> parent of f257e40... revert
 connection = mysql.createConnection(process.env.JAWSDB_URL); 
 
 // Make connection.
