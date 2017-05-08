@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 const mysql = require('mysql'); 
 var connection;
 // if (process.env.JAWSDB_URL) {
@@ -10,6 +11,11 @@ var connection;
 //     database: "burgers_db"
 //   });
 // }
+=======
+const mysql = require('mysql');
+var connection;
+
+>>>>>>> parent of f257e40... revert
 connection = mysql.createConnection(process.env.JAWSDB_URL); 
 
 // Make connection.
