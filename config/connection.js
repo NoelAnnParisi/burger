@@ -13,7 +13,7 @@ var connection;
 // }
 =======
 const mysql = require('mysql');
-var connection;
+const connection;
 
 >>>>>>> parent of f257e40... revert
 connection = mysql.createConnection(process.env.JAWSDB_URL); 
